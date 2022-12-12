@@ -1,4 +1,11 @@
 pip install fastapi
 pip install uvicorn
 pip install sqlalchemy
-npm install @mui/material @emotion/react @emotion/styled
+pip install spacy
+
+npm install @mui/material
+npm install @emotion/react
+npm install @emotion/styled
+npm install @mui/icons-material
+npm install recharts
+npm install qs

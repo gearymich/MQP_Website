@@ -1,25 +1,20 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from starlette.middleware.cors import CORSMiddleware
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 import uvicorn
 
-# create the SQLAlchemy base class
-Base = declarative_base()
+import spacy
+from spacy import displacy
 
-# define the User model
-class User(Base):
-    __tablename__ = "users"
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-    email = Column(String)
+from db_schema import Base, User
 
-# create a SQLite database, create the tables
+# # create a SQLite database, create the tables
 engine = create_engine("sqlite:///database.db")
 Base.metadata.create_all(engine)
 
-# create a new session, database and tables
+# # create a new session, database and tables
 Session = sessionmaker(bind=engine)
 app = FastAPI()
 
@@ -33,19 +28,48 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# create a new user
-@app.get("/users")
-def get_users():
-    # create a new session
-    session = Session()
-    try:
-        # retrieve all users from the database, return as a JSON response
-        users = session.query(User).all()
-        return users
-    finally:
-        # close the session
-        session.close()
+class TextAnalyzer:
+    def __init__(self):
+        self.nlp = spacy.load("en_core_web_sm")
+
+    async def analyze_text(self, request: Request):
+        # get the text from the request
+        data = await request.json()
+        text = data['text']
+        # print("Text:", text)
+        doc = self.nlp(text)
+        html = displacy.render(doc, style="ent")
+        return {
+            "entities": [{"text": ent.text, "label": ent.label_} for ent in doc.ents],
+            "html": html,
+        }
+
+class UserManager:
+    def __init__(self):
+        self.session = Session()
+    
+    def get_users(self):
+        try:
+            # retrieve all users from the database, return as a JSON response
+            users = self.session.query(User).all()
+            return users
+        finally:
+            # close the session
+            self.session.close()
+
+class FastAPIServer:
+    def __init__(self, app):
+        self.app = app
+    
+        self.user_manager = UserManager()
+        self.text_analyzer = TextAnalyzer()
+
+        self.app.get("/users")(self.user_manager.get_users)
+        self.app.post("/analyze")(self.text_analyzer.analyze_text)
+
+    def run(self):
+        uvicorn.run(self.app, host="0.0.0.0", port=8000)
 
 if __name__ == "__main__":
-    # open endpoint onto the relevant url using uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    server = FastAPIServer(app)
+    server.run()

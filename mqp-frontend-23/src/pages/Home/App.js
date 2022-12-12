@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import UserList from '../../components/UserList';
+import SpacyHTML from '../../components/SpacyHTML';
 import Button from '@mui/material/Button';
 // import axios from 'axios';
 
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Button variant="contained">Hello World</Button>
+        <SpacyHTML />
         <UserList />
         <p>
           Edit <code>src/App.js</code> and save to reload.
