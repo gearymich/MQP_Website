@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from '../../node_modules/axios';
 import qs from 'qs';
 
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 const SpacyHTML = () => {
   // Use React's "useState" hook to manage the visualization HTML
   const [html, setHtml] = useState("");
@@ -30,17 +33,27 @@ const SpacyHTML = () => {
 
 return (
     <div className="App">
-      <h1>Named Entity Visualization</h1>
+      <h2>Named Entity Visualization</h2>
       <form onSubmit={handleSubmit}>
         {/* Define a form to collect the text to analyze */}
         <label>
-          Text:
-          <input type="text" name="text" />
+            <TextField
+            id="text"
+            label="Enter your text here"
+            variant="filled"
+            InputProps={{
+            style: { backgroundColor: 'white', margin: '10px' },
+          }}
+          />
+          <Button 
+          type="submit" 
+          variant="contained" 
+          color="primary"> 
+          Analyze </Button>
         </label>
-        <input type="submit" value="Analyze" />
       </form>
       {/* Use React's "dangerouslySetInnerHTML" property to render the HTML */}
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div dangerouslySetInnerHTML={{ __html: html }} style={{ margin: '10px' }}/>
     </div>
   );
 }
