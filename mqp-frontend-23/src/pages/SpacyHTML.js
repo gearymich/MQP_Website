@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from '../../node_modules/axios';
-import qs from 'qs';
+import axios from 'axios';
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
