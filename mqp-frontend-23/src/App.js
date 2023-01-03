@@ -64,7 +64,6 @@ function FullWidthTabs() {
       <AppBar position="static">
       <Typography
             variant="h4"
-            noWrap
             component="a"
             sx={{
               mr: 2,
