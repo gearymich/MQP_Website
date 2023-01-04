@@ -90,22 +90,6 @@ align-content: center;
 text-align: center;
 }
 
-.margin {
-margin: 40px;
-}
-
-.green {
-color: green !important;
-}
-
-.white {
-color: white;
-}
-
-.bold {
-font-weight: bold;
-}
-
 .border {
 border: 2px solid rgba(169, 176, 183, 0.3);
 }
@@ -114,57 +98,12 @@ border: 2px solid rgba(169, 176, 183, 0.3);
 border: 2px solid rgba(0, 0, 0, 0.4);
 }
 
-.no-padding {
-padding: 0px;
+
+/* SPACY ONLY STYLING*/
+.ner-submit {
+margin-top: 20px;
 }
 
-.fill-space {
-width: 100%;
-height: 100%;
-}
-
-.overlay {
-fill: none;
-pointer-events: all;
-}
-
-.focus {
-fill: #f1f3f3;
-stroke: rgb(172, 43, 55);
-stroke-width: 1.5px;
-}
-
-.hover-line {
-stroke: rgb(172, 43, 55);
-stroke-width: 2px;
-stroke-dasharray: 3, 3;
-}
-
-.node rect {
-cursor: move;
-fill-opacity: 0.9;
-shape-rendering: crispEdges;
-}
-
-.node text {
-pointer-events: none;
-text-shadow: 0 1px 0 #fff;
-}
-
-.link {
-fill: none;
-stroke: #000;
-stroke-opacity: 0.15;
-}
-
-.link:hover {
-stroke-opacity: 0.25;
-}
-
-.svg {
-position: relative;
-}
-
-.canvas {
-position: absolute;
+.spacy-output {
+margin: 40px;
 }

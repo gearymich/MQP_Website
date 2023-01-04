@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, Switch, CssBaseline, Typography, AppBar, Card, CardActions, CardMedia, Grid, Toolbar, Container } from '@mui/material';
+import { Grid } from '@mui/material';
 
 import './Home.css';
 
@@ -35,7 +35,9 @@ function Home() {
             alt="Flamngos in Laguna Colorada, Bolivia"
           />
       </div>
+
       <h2 className="data-at-a-glance">Data At a Glance</h2>
+      
       {/* Home Section - Columns */}
       <div className="story-budget-break">
         <Grid container spacing={3} direction="row" justifyContent="space-around" alignItems="center" paddingTop={"20px"}>
