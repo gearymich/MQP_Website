@@ -1,3 +1,8 @@
+#############################
+# Dependencies for the web application (frontend + backend)
+# Execute all the commands below from the terminal
+# Only needs to be set up once for a given device
+#############################
 pip install fastapi
 pip install uvicorn
 pip install sqlalchemy

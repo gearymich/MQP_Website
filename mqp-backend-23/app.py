@@ -7,15 +7,12 @@ Will be iterated on heavily this term.
 
 from fastapi import FastAPI, Request
 from starlette.middleware.cors import CORSMiddleware
-from sqlalchemy import Column, Integer, String, create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
 import uvicorn
 
 import spacy
 from spacy import displacy
 
-from model import Base, User
+from model import Session, User
 
 #############################
 # SpaCy Model
@@ -24,14 +21,6 @@ from model import Base, User
 TODO: Allow multiple types of models to be loaded, switched out on the fly
 '''
 nlp = spacy.load("en_core_web_sm")
-
-
-#############################
-# Database Setup
-#############################
-engine = create_engine("sqlite:///database/database.db") # uses relative path
-Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine)
 
 
 #############################
@@ -66,19 +55,13 @@ async def analyze_text(request: Request):
 
 '''
 Prototype Tab 'users' calls this endpoint to populate the
-data seen on the webpage
+data seen on the webpage.
 '''
 @app.get("/users")
 def get_users():
-    try:
-        # retrieve all users from the database, return as a JSON response
-        session = Session()
-        users = session.query(User).all()
-        return users
-    finally:
-        # close the session
-        session.close()
-
+    session = Session()
+    users = session.query(User).all()
+    return users
 
 '''
 TODO: wrap all functions with CLI tool for ease of use 
