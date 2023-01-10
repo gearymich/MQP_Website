@@ -6,7 +6,7 @@ This Web Application was created to demo the results found from our resarch for 
 
 To install the dependancies for this project, execute each command defined in `requirements.txt` within the command prompt.
 
-For Windows devices, the backend and frontend portions of the application can be started by executing the respective batch files.
+For Windows devices, the backend and frontend portions of the application can be started by executing the respective batch files under `\bat-files`.
 
 ## Other Info
 
