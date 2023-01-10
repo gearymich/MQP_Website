@@ -4,6 +4,7 @@ pip install sqlalchemy
 pip install spacy
 
 npm install react-router-dom
+npm install react-swipeable-views --force
 npm install @mui/material
 npm install @emotion/react
 npm install @emotion/styled

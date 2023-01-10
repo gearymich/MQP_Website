@@ -1,3 +1,8 @@
+'''
+This file is used to initialize the database, and to define the classes
+used with it.
+'''
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
