@@ -1,4 +1,2 @@
-database.db
-mqp-backend-23/__pycache__/model.cpython-310.pyc
-mqp-backend-23/__pycache__/db_schema.cpython-310.pyc
-mqp-backend-23/__pycache__/db_schema.cpython-310.pyc
+mqp-backend-23/database.db
+mqp-backend-23/__pycache__/
