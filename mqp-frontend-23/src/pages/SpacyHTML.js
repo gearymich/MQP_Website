@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
+import { FormControl, InputLabel, Select, MenuItem, Button, TextField } from '@mui/material';
 
 import './Home.css';
 import { margin, padding } from '@mui/system';
 
 // TODO: Change to Wildlife Crime related text
-const exampleString = "When Sebastian Thrun started working on \
+const defaultText = "When Sebastian Thrun started working on \
 self-driving cars at Google in 2007, few people outside of the \
 company took him seriously. “I can tell you very senior CEOs of\
  major American car companies would shake my hand and turn away\
@@ -19,15 +17,26 @@ const SpacyHTML = () => {
   // Use React's "useState" hook to manage the visualization HTML
   const [html, setHtml] = useState("");
 
+  const [models, setModels] = useState([]);
+  const [model, setModel] = useState();
+  const [text, setText] = React.useState(defaultText)
+  const [result, setResult] = useState('')
+
+  useEffect(() => {
+    // Populate the models dropdown
+    fetch(`http://127.0.0.1:8000/models`)
+        .then((r) => r.json())
+        .then((result) => setModels(result))
+  }, [])
+  
   const handleResponse = response => {
     //console log the response data to see the format
     const html = response.html;
     setHtml(html);
   };
 
-
   // Define a function to handle the submission of the form
-  const handleSubmit = event => {
+  const processText = event => {
     event.preventDefault();
     const text = event.target.elements.text.value;
     axios.post("http://127.0.0.1:8000/analyze", JSON.stringify({ text: text }))
@@ -40,18 +49,30 @@ const SpacyHTML = () => {
         console.log(error);
       });
 };
-
 return (
     <main>
-      {/* Home Section - Header */}
       <div className="home-header">
-        {/* Home Section - NER Submit */}
-        <form className="ner-submit" onSubmit={handleSubmit}>
-          {/* Define a form to collect the text to analyze */}
+        <h1>Spacy HTML</h1>
+        <FormControl sx={{width: '500px'}}>
+          <InputLabel id="demo-simple-select-label">Model</InputLabel>
+          <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            // value={age}
+            label="Model"
+            // onChange={handleChange}
+          >
+            <MenuItem value={10}>en_core_web_sm</MenuItem>
+            <MenuItem value={20}>en_core_web_md</MenuItem>
+            <MenuItem value={30}>en_core_web_lg</MenuItem>
+            <MenuItem value={40}>en_core_web_trf</MenuItem>
+          </Select>
+        </FormControl>
+        <form className="ner-submit" onSubmit={processText}>
           <label>
             <TextField fullWidth multiline rows={8}
             label="Enter your text here"
-            defaultValue= {exampleString}
+            defaultValue= {defaultText}
             variant="outlined" name="text"
             />
 
@@ -60,20 +81,9 @@ return (
             </Button>
           </label>
         </form>
-        <div className="box title">
-          {/* <h1>What is Wildlife Crime?</h1>
-          <p>
-          Wildlife Crime is the illegal trade of animals and 
-          plants, which threatens the survival of many species 
-          and undermines the efforts of conservationists worldwide. This project
-          aims to quantify the extent of Wildlife Crime through the use of Natural Language Processing (NLP)
-          on publicly available news articles, and to provide a platform to visualize this data for use by domain experts.
-          </p> */}
-        </div>
       </div>
 
       {/* Use React's "dangerouslySetInnerHTML" property to render the HTML */}
-      <div className="chat-gpt-info"></div>
       <div className="spacy-output border-black" dangerouslySetInnerHTML={{ __html: html }} />
     </main>
   );

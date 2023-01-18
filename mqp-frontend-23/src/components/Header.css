@@ -1,0 +1,12 @@
+.header-text {
+    font-family: 'Roboto';
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    justify-content: center;
+    color: inherit;
+    display: inline-block;
+    text-align: center;
+    padding: 1vh 1vw;
+}
