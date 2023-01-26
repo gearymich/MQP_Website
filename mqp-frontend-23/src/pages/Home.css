@@ -22,7 +22,9 @@ padding-left: 4%;
 padding-right: 4%;
 }
 
-.max-height {
+.data-text {
+text-align: center;
+border: 2px solid rgba(0, 0, 0, 0.4);
 height: 100%;
 min-height: 120px;
 border-radius: 5px;
@@ -46,8 +48,8 @@ text-align: center;
 text-align: center;
 /* margin-top: 4%; */
 border-radius: 5px;
-max-width: 500px;
-margin-right: 30px;
+/* max-width: 500px; */
+/* margin-right: 30px; */
 }
 
 .slf-padding {
@@ -86,18 +88,9 @@ text-align: center;
 align-content: center;
 }
 
-.align-text {
-text-align: center;
-}
-
 .border {
 border: 2px solid rgba(169, 176, 183, 0.3);
 }
-
-.border-black {
-border: 2px solid rgba(0, 0, 0, 0.4);
-}
-
 
 /* SPACY ONLY STYLING*/
 .ner-submit {
@@ -106,4 +99,12 @@ margin-top: 20px;
 
 .spacy-output {
 margin: 40px;
+}
+
+.data-stats {
+display: grid;
+direction: row;
+justify-content: space-around;
+align-items: center;
+padding-top: 20px;
 }

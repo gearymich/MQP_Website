@@ -4,9 +4,7 @@ import { Outlet, Link } from 'react-router-dom';
 
 import SwipeableViews from 'react-swipeable-views';
 import { Tabs, Tab, Typography, AppBar, Box } from '@mui/material';
-import { useTheme} from '@mui/material/styles';
-
-import PropTypes from 'prop-types';
+import { useTheme } from '@mui/material/styles';
 
 import "./Header.css";
 
@@ -35,7 +33,7 @@ function Header() {
   return (
   <>
     <AppBar position="static">
-      <div className="header-text">WPI - Wildlife Crime MQP</div>
+      <div className="header-text">WPI - Wildlife Crime MQP (2023)</div>
       <Tabs
         value={-1}
         sx={{ fontFamily: 'Roboto' }}
@@ -45,7 +43,7 @@ function Header() {
       >
         <Tab label="Home" component={Link} to="/" />
         <Tab label="Users"  component={Link} to="/users" />
-        <Tab label="Spacy" component={Link} to="/spacy" />
+        <Tab label="About" component={Link} to="/about" />
       </Tabs>
     </AppBar>
 

@@ -9,7 +9,7 @@ const UserList = () => {
     const fetchUsers = async () => {
       try {
         const response = await axios.get('http://127.0.0.1:8000/users');
-        console.log(response.data); // log the response data
+        // console.log(response.data);
         setUsers(response.data);
       } catch (error) {
         console.error(error);
@@ -48,5 +48,4 @@ const UserList = () => {
   );
 };
 
-// Export the UserList component
 export default UserList;

@@ -3,10 +3,10 @@
 # Execute all the commands below from the terminal
 # Only needs to be set up once for a given device
 #############################
-pip install fastapi
-pip install uvicorn
-pip install sqlalchemy
-pip install spacy
+# pip install fastapi
+# pip install uvicorn
+# pip install sqlalchemy
+# pip install spacy
 
 npm install react-router-dom
 npm install react-swipeable-views --force

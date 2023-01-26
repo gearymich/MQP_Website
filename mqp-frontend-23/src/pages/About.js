@@ -13,42 +13,23 @@ company took him seriously. “I can tell you very senior CEOs of\
  because I wasn't worth talking to,” said Thrun, in an interview\
 with Recode earlier this week.";
 
-const SpacyHTML = () => {
+const About = () => {
   // Use React's "useState" hook to manage the visualization HTML
   const [html, setHtml] = useState("");
 
-  const [models, setModels] = useState([]);
-  const [model, setModel] = useState();
-  const [text, setText] = React.useState(defaultText)
-  const [result, setResult] = useState('')
-
-  useEffect(() => {
-    // Populate the models dropdown
-    fetch(`http://127.0.0.1:8000/models`)
-        .then((r) => r.json())
-        .then((result) => setModels(result))
-  }, [])
-  
-  const handleResponse = response => {
-    //console log the response data to see the format
-    const html = response.html;
-    setHtml(html);
-  };
-
-  // Define a function to handle the submission of the form
-  const processText = event => {
+  const formSubmit = event => {
     event.preventDefault();
     const text = event.target.elements.text.value;
     axios.post("http://127.0.0.1:8000/analyze", JSON.stringify({ text: text }))
-    .then(response => {
-        // Handle the response
-        console.log(response.data.message);
-        handleResponse(response.data);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-};
+    .then(response => { 
+      const html = response;
+      setHtml(html.data.html);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  };
+
 return (
     <main>
       <div className="home-header">
@@ -68,7 +49,7 @@ return (
             <MenuItem value={40}>en_core_web_trf</MenuItem>
           </Select>
         </FormControl>
-        <form className="ner-submit" onSubmit={processText}>
+        <form className="ner-submit" onSubmit={formSubmit}>
           <label>
             <TextField fullWidth multiline rows={8}
             label="Enter your text here"
@@ -90,4 +71,4 @@ return (
 }
 
 // Export the UserList component
-export default SpacyHTML;
+export default About;
