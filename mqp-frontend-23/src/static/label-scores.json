@@ -1,0 +1,131 @@
+{
+    "count": 14,
+    "entries": [
+        {
+            "id": 1,
+            "label": "newsSource",
+            "count" : 300,
+            "f1-score": 96.23,
+            "standard-error": 3.339,
+            "lb-ci": 89.56,
+            "ub-ci": 100.0
+        },
+        {
+            "id": 2,
+            "label": "publishDate",
+            "count" : 136,
+            "f1-score": 100.0,
+            "standard-error": 0.000,
+            "lb-ci": 100.0,
+            "ub-ci": 100.0
+        },
+        {
+            "id": 3,
+            "label": "numOfArrests",
+            "count" : 479,
+            "f1-score": 90.94,
+            "standard-error": 3.507,
+            "lb-ci": 83.93,
+            "ub-ci": 97.95
+        },
+        {
+            "id": 4,
+            "label": "seizureLocation",
+            "count" : 589,
+            "f1-score": 80.47,
+            "standard-error": 5.465,
+            "lb-ci": 69.54,
+            "ub-ci": 91.4
+        },
+        {
+            "id": 5,
+            "label": "productName",
+            "count" : 1323,
+            "f1-score": 95.52,
+            "standard-error": 1.547,
+            "lb-ci": 92.43,
+            "ub-ci": 98.61
+        },
+        {
+            "id": 6,
+            "label": "species",
+            "count" : 2085,
+            "f1-score": 98.19,
+            "standard-error": 0.7182,
+            "lb-ci": 96.76,
+            "ub-ci": 99.63
+        },
+        {
+            "id": 7,
+            "label": "traffickerName",
+            "count" : 538,
+            "f1-score": 94.25,
+            "standard-error": 2.880,
+            "lb-ci": 88.49,
+            "ub-ci": 100.0
+        },
+        {
+            "id": 8,
+            "label": "traffickerBirthYear",
+            "count" : 245,
+            "f1-score": 100.0,
+            "standard-error": 0.000,
+            "lb-ci": 100.0,
+            "ub-ci": 100.0
+        },
+        {
+            "id": 9,
+            "label": "traffickerOrigin",
+            "count" : 315,
+            "f1-score": 88.66,
+            "standard-error": 5.674,
+            "lb-ci": 77.31,
+            "ub-ci": 100.0
+        },
+        {
+            "id": 10,
+            "label": "priceUnit",
+            "count" : 160,
+            "f1-score": 78.76,
+            "standard-error": 18.19,
+            "lb-ci": 42.37,
+            "ub-ci": 100.0
+        },
+        {
+            "id": 11,
+            "label": "price",
+            "count" : 170,
+            "f1-score": 84.98,
+            "standard-error": 11.24,
+            "lb-ci": 62.51,
+            "ub-ci": 100.0
+        },
+        {
+            "id": 12,
+            "label": "quantity",
+            "count" : 1003,
+            "f1-score": 94.84,
+            "standard-error": 1.680,
+            "lb-ci": 91.48,
+            "ub-ci": 98.20
+        },
+        {
+            "id": 13,
+            "label": "quantityUnit",
+            "count" : 269,
+            "f1-score": 84.00,
+            "standard-error": 9.941,
+            "lb-ci": 64.12,
+            "ub-ci": 100.0
+        },
+        {
+            "id": 14,
+            "label": "alive",
+            "count" : 69,
+            "f1-score": 97.29,
+            "standard-error": 3.315,
+            "lb-ci": 90.66,
+            "ub-ci": 100.0
+        }
+    ]
+}

@@ -42,8 +42,8 @@ function Header() {
         aria-label="full width tabs example"
       >
         <Tab label="Home" component={Link} to="/" />
-        <Tab label="Users"  component={Link} to="/users" />
-        <Tab label="About" component={Link} to="/about" />
+        <Tab label="Model Results"  component={Link} to="/users" />
+        <Tab label="Tableau Data" component={Link} to="/about" />
       </Tabs>
     </AppBar>
 

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Grid, Typography } from '@mui/material';
-
 import './Home.css';
 
 const DataItem = ({ text }) => (

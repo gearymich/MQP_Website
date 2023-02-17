@@ -1,50 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import React from 'react';
+import { Typography  } from '@mui/material';
+
+import ModelTable from '../components/ModelTable';
+import LabelTable from '../components/LabelTable';
 
 const UserList = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get('http://127.0.0.1:8000/users');
-        // console.log(response.data);
-        setUsers(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchUsers();
-  }, []);
 
   return (
-    <>
-    <Typography variant="h3" align="center" color="textPrimary" gutterBottom>
-    Data Table
-    </Typography>
-    <TableContainer sx={{ maxWidth: 400 }} component={Paper} >
-      <Table sx={{ minWidth: 400 }} size="small" aria-label="users table">
-        <TableHead>
-          <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell align="right">Email</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {users.map(user => (
-            <TableRow key={user.id}>
-              <TableCell component="th" scope="row">
-                {user.name}
-              </TableCell>
-              <TableCell align="right">{user.email}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    </>
+    <main>
+      <Typography variant="h5" align="center" color="textPrimary" gutterBottom> Model Table </Typography>
+      <div className="home-header">
+      <ModelTable/>
+      </div>
+      <Typography variant="h5" align="center" color="textPrimary" gutterBottom> Label Table </Typography>
+      <div className="home-header">
+      <LabelTable/>
+      </div>
+    </main>
   );
 };
 
