@@ -36,27 +36,16 @@ function Header() {
       <div className="header-text">WPI - Wildlife Crime MQP (2023)</div>
       <Tabs
         value={-1}
-        sx={{ fontFamily: 'Roboto' }}
+        sx={{ fontFamily: 'Roboto'}}
         textColor="white"
         variant="fullWidth"
         aria-label="full width tabs example"
       >
         <Tab label="Home" component={Link} to="/" />
         <Tab label="Model Results"  component={Link} to="/users" />
-        <Tab label="Tableau Data" component={Link} to="/about" />
+        <Tab label="Tableau Data" component={Link} to="/about/trafficker-report" />
       </Tabs>
     </AppBar>
-
-    <SwipeableViews
-      axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-      index={value}
-      onChangeIndex={handleChangeIndex}
-    >
-      <TabPanel value={value} index={0} dir={theme.direction}/>
-      <TabPanel value={value} index={1} dir={theme.direction}/>
-      <TabPanel value={value} index={2} dir={theme.direction}/>
-    </SwipeableViews>
-
     <Outlet />
   </>
   );

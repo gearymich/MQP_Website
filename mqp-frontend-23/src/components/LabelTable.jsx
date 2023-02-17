@@ -60,12 +60,13 @@ const columns = [
 const LabelTable = () => {
   return (
     <div style={{ width: '100%' }}>
-    <DataGrid 
+    <DataGrid
     disableSelectionOnClick 
     autoHeight={true}
     rows={labelSummaries}
     columns={columns}
     components={{Toolbar: GridToolbar}}
+    density="compact"
     />
     </div>
   );

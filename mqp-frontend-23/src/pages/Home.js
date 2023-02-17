@@ -32,10 +32,10 @@ function Home() {
           </Grid>
           <Grid item xs={8} sm={6}>
             <img
-              src="./Flamingos_Laguna_Colorada_New.jpg"
+              src="./Elephas_maximus_(Bandipur).jpg"
               height="100%"
               width= "100%"
-              alt="Flamngos in Laguna Colorada, Bolivia"
+              alt="Indian Elephant"
               />
           </Grid>
         </Grid>

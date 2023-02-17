@@ -1,0 +1,8 @@
+.reports-stats {
+    display: grid;
+    direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 12%;
+    padding-right: 12%;
+}

@@ -1,14 +1,14 @@
 import React from 'react';
 import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
-import ModelScores from "../static/model-scores.json";
+import OldModelScores from "../static/old-model-scores.json";
 
 // Load Project Summary Data from JSON
 // NOTE: Data wants an ID for some reason
 const projectSummaries = []
 
-for (let i = 0; i < ModelScores.count; i++) {
-    projectSummaries.push(ModelScores.entries[i])
+for (let i = 0; i < OldModelScores.count; i++) {
+    projectSummaries.push(OldModelScores.entries[i])
 }
 
 const columns = [
@@ -45,7 +45,7 @@ const columns = [
     }
 ];
 
-const ModelTable = () => {
+const OldModelTable = () => {
   return (
     <div style={{ width: '100%' }}>
     <DataGrid 
@@ -60,4 +60,4 @@ const ModelTable = () => {
   );
 }
 
-export default ModelTable;
+export default OldModelTable;
