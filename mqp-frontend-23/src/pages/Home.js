@@ -4,7 +4,7 @@ import { Grid, Typography } from '@mui/material';
 import './Home.css';
 
 const DataItem = ({ text }) => (
-  <Grid item xs={8} sm={4}>
+  <Grid item xs={3} sm={4}>
     <div className="data-text">
       <p>{text}</p>
     </div>
@@ -13,11 +13,11 @@ const DataItem = ({ text }) => (
 
 function Home() {
   return (
-    <main>
+    <main className="global-padding">
       {/* Home Section - Header */}
-      <div className="home-header">
-        <Grid container spacing={2} className="data-stats">
-          <Grid item xs={8} sm={6}>
+      <div className="home-section">
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} className="grid-format">
+          <Grid item xs={4} sm={6}>
             <div className="title">
               <h1 className="title-hero">What is Wildlife Crime?</h1>
               <p>
@@ -30,26 +30,25 @@ function Home() {
               </p>
             </div>
           </Grid>
-          <Grid item xs={8} sm={6}>
+          <Grid item xs={4} sm={6}>
             <img
               src="./Elephas_maximus_(Bandipur).jpg"
-              height="100%"
-              width= "100%"
-              alt="Indian Elephant"
+              alt= "Indian Elephant"
+              className="elephant-img"
               />
           </Grid>
         </Grid>
       </div>
       {/* Home Section - Columns */}
-      <div className="story-budget-break">
-        <h2 className="data-at-a-glance">Data At a Glance</h2>
-        <Grid container spacing={3} className="data-stats">
+      <div className="data-section">
+        <h2 className="data-hero">Data At a Glance</h2>
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} className="grid-format">
           <DataItem text={"15 Labels used for Classification"} />
-          <DataItem text={"XXX Unique Tokens Found"} />
+          <DataItem text={"Over 5000 Unique Tokens Extracted"} />
           <DataItem text={"Over 300 Documents Annotated"} />
           <DataItem text={"Data sourced from over 23 News Sources"} />
           <DataItem text={"XXX Poached Species/Products Identified"} />
-          <DataItem text={"Crimes Identified across XXX Countries"} />
+          <DataItem text={"Crimes Identified across All 28 States and 8 Union Territories of India"} />
         </Grid>
       </div>
     </main>

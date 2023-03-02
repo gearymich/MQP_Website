@@ -29,7 +29,15 @@ const tableauOptions = {
     return (
     <div className="reports-stats">
     <TableauReport
+      url="https://public.tableau.com/views/TableauVisualsMQP-TraffickerStateofOrigin/TraffickerDashboard?:language=en-US&:display_count=n&:origin=viz_share_link"
+      options={tableauOptions}
+    />
+    <TableauReport
       url="https://public.tableau.com/views/TableauVisualsMQP-SeizureLocation/SeizureDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
+      options={tableauOptions}
+    />
+    <TableauReport
+      url="https://public.tableau.com/views/TableauVisualsMQP-PlantAnimalStatistics/QuantityPriceDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
       options={tableauOptions}
     />
     </div>

@@ -35,15 +35,14 @@ function Header() {
     <AppBar position="static">
       <div className="header-text">WPI - Wildlife Crime MQP (2023)</div>
       <Tabs
-        value={-1}
+        // value={-1}
         sx={{ fontFamily: 'Roboto'}}
         textColor="white"
         variant="fullWidth"
-        aria-label="full width tabs example"
       >
         <Tab label="Home" component={Link} to="/" />
         <Tab label="Model Results"  component={Link} to="/users" />
-        <Tab label="Tableau Data" component={Link} to="/about/trafficker-report" />
+        <Tab label="Tableau Data" component={Link} to="/about" />
       </Tabs>
     </AppBar>
     <Outlet />
