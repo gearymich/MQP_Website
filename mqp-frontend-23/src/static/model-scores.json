@@ -1,37 +1,53 @@
 {
-    "count": 4,
+    "count": 6,
     "entries": [
         {
             "id": 1,
-            "model": "Submodels, Tok2Vec",
-            "f1-score": "87.59",
-            "standard-error": "1.612",
-            "lb-ci": "84.36",
-            "ub-ci": "90.81"
+            "model": "Default SpaCy NER, Tok2Vec",
+            "f1-score": 10.72,
+            "standard-error": 1.549,
+            "lb-ci": 7.571,
+            "ub-ci": 13.56
         },
         {
             "id": 2,
-            "model": "Single Model, Tok2Vec",
-            "f1-score": "87.60",
-            "standard-error": "1.641",
-            "lb-ci": "84.32",
-            "ub-ci": "90.89"
+            "model": "Default SpaCy NER + 2022 Entity Ruler, Tok2Vec",
+            "f1-score": 11.92,
+            "standard-error": 2.034,
+            "lb-ci": 8.025,
+            "ub-ci": 16.78
         },
         {
             "id": 3,
-            "model": "Submodels, Transformer",
-            "f1-score": "93.10",
-            "standard-error": "1.352",
-            "lb-ci": "90.40",
-            "ub-ci": "95.81"
+            "model": "Submodels, Tok2Vec",
+            "f1-score": 87.59,
+            "standard-error": 1.612,
+            "lb-ci": 84.36,
+            "ub-ci": 90.81
         },
         {
             "id": 4,
+            "model": "Single Model, Tok2Vec",
+            "f1-score": 87.60,
+            "standard-error": 1.641,
+            "lb-ci": 84.32,
+            "ub-ci": 90.89
+        },
+        {
+            "id": 5,
+            "model": "Submodels, Transformer",
+            "f1-score": 93.10,
+            "standard-error": 1.352,
+            "lb-ci": 90.40,
+            "ub-ci": 95.81
+        },
+        {
+            "id": 6,
             "model": "Single Model, Transformer",
-            "f1-score": "93.87",
-            "standard-error": "1.085",
-            "lb-ci": "91.70",
-            "ub-ci": "96.04"
+            "f1-score": 93.87,
+            "standard-error": 1.085,
+            "lb-ci": 91.70,
+            "ub-ci": 96.04
         }
     ]
 }

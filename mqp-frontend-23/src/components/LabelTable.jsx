@@ -1,7 +1,9 @@
 import React from 'react';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 import LabelScores from "../static/label-scores.json";
+import StripedDataGrid from "./StripedDataGrid.jsx"
+
+import "./Table.css";
 
 // Load Project Summary Data from JSON
 // NOTE: Data wants an ID for some reason
@@ -12,31 +14,35 @@ for (let i = 0; i < LabelScores.count; i++) {
 }
 
 const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
+    { field: 'id', hide: true},
     {
         field: 'label',
         headerName: 'label',
-        width: 200,
+        minWidth: 90,
+        flex: 1,
         editable: false
     },
     {
         field: 'count',
         headerName: 'Label Count',
-        width: 100,
+        minWidth: 50,
+        flex: 1,
         editable: false,
         type: 'number'
     },
     {
         field: 'f1-score',
         headerName: 'Mean F1-Score',
-        width: 200,
+        minWidth: 90,
+        flex: 1,
         editable: false,
         type: 'number'
     },
     {
         field: 'standard-error',
         headerName: 'Standard Error',
-        width: 200,
+        minWidth: 90,
+        flex: 1,
         editable: false,
         type: 'number'
 
@@ -44,14 +50,16 @@ const columns = [
     {
         field: 'lb-ci',
         headerName: 'Lower Bound (95% CI)',
-        width: 200,
+        minWidth: 90,
+        flex: 1,
         editable: false,
         type: 'number'
     },
     {
         field: 'ub-ci',
         headerName: 'Upper Bound (95% CI)',
-        width: 200,
+        minWidth: 90,
+        flex: 1,
         editable: false,
         type: 'number'
     }
@@ -59,15 +67,17 @@ const columns = [
 
 const LabelTable = () => {
   return (
-    <div style={{ width: '100%' }}>
-    <DataGrid
-    disableSelectionOnClick 
-    autoHeight={true}
-    rows={labelSummaries}
-    columns={columns}
-    components={{Toolbar: GridToolbar}}
-    density="compact"
-    />
+    <div className='global-padding'>
+        <StripedDataGrid
+        hideFooter
+        autoHeight={true}
+        rows={labelSummaries}
+        columns={columns}
+        density="compact"
+        getRowClassName={(params) =>
+            params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd'
+        }
+        />
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import React from 'react';
-import { DataGrid, GridToolbar } from '@mui/x-data-grid';
 
 import ModelScores from "../static/model-scores.json";
+import StripedDataGrid from "./StripedDataGrid.jsx"
+
+import "./Table.css";
 
 // Load Project Summary Data from JSON
 // NOTE: Data wants an ID for some reason
@@ -12,50 +14,62 @@ for (let i = 0; i < ModelScores.count; i++) {
 }
 
 const columns = [
-    { field: 'id', headerName: 'ID', width: 70 },
+    { field: 'id', hide: true},
     {
         field: 'model',
         headerName: 'Model',
-        width: 300,
+        minWidth: 200,
+        flex: 1,
+        type: 'number',
         editable: false
     },
     {
         field: 'f1-score',
         headerName: 'Mean F1-Score',
-        width: 200,
+        minWidth: 50,
+        flex: 1,
+        type: 'number',
         editable: false
     },
     {
         field: 'standard-error',
         headerName: 'Standard Error',
-        width: 200,
+        minWidth: 90,
+        flex: 1,
+        type: 'number',
         editable: false
     },
     {
         field: 'lb-ci',
         headerName: 'Lower Bound (95% CI)',
-        width: 200,
+        minWidth: 90,
+        flex: 1,
+        type: 'number',
         editable: false
     },
     {
         field: 'ub-ci',
         headerName: 'Upper Bound (95% CI)',
-        width: 200,
+        minWidth: 90,
+        flex: 1,
+        type: 'number',
         editable: false
     }
 ];
 
 const ModelTable = () => {
   return (
-    <div style={{ width: '100%' }}>
-    <DataGrid 
-    disableSelectionOnClick 
-    autoHeight={true}
-    rows={projectSummaries}
-    columns={columns}
-    components={{Toolbar: GridToolbar}}
-    density="compact"
-    />
+    <div className='global-padding'>
+        <StripedDataGrid 
+        hideFooter
+        autoHeight={true}
+        rows={projectSummaries}
+        columns={columns}
+        density="standard"
+        getRowClassName={(params) =>
+            params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd'
+        }
+        />
     </div>
   );
 }

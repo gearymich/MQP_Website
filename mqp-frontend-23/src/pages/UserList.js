@@ -1,25 +1,20 @@
 import React from 'react';
-import { Typography  } from '@mui/material';
 
 import ModelTable from '../components/ModelTable';
 import LabelTable from '../components/LabelTable';
-import OldModelTable from '../components/OldModelTable';
+
+import './UserList.css';
 
 const UserList = () => {
-
   return (
-    <main>
-      <Typography variant="h5" align="center" color="textPrimary" sx={{paddingTop: "30px"}} gutterBottom> 2022 MQP Model Data (OLD) </Typography>
-      <div className="home-header">
-      <OldModelTable/>
+    <main className='table-container'>
+      <h2> 2023 MQP Model Data </h2>
+      <div>     
+        <ModelTable/>
       </div>
-      <Typography variant="h5" align="center" color="textPrimary" gutterBottom> 2023 MQP Model Data </Typography>
-      <div className="home-header">
-      <ModelTable/>
-      </div>
-      <Typography variant="h5" align="center" color="textPrimary" gutterBottom> 2023 MQP Model Data (By Label) </Typography>
-      <div className="home-header">
-      <LabelTable/>
+      <h2> 2023 MQP Model Data (By Label) </h2>
+      <div>
+        <LabelTable/>
       </div>
     </main>
   );

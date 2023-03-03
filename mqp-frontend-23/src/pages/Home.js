@@ -16,8 +16,8 @@ function Home() {
     <main className="global-padding">
       {/* Home Section - Header */}
       <div className="home-section">
-        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} className="grid-format">
-          <Grid item xs={4} sm={6}>
+        <Grid container spacing={{ xs: 2, md: 3 }} columns={{ sm: 8, md: 12 }} className="grid-format">
+          <Grid item xs={5} sm={6}>
             <div className="title">
               <h1 className="title-hero">What is Wildlife Crime?</h1>
               <p>
@@ -30,7 +30,7 @@ function Home() {
               </p>
             </div>
           </Grid>
-          <Grid item xs={4} sm={6}>
+          <Grid item xs={5} sm={6}>
             <img
               src="./Elephas_maximus_(Bandipur).jpg"
               alt= "Indian Elephant"

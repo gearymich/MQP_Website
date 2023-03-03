@@ -1,7 +1,17 @@
-.home-header {
-    padding-left: 12%;
-    padding-right: 12%;
-    justify-content: space-between;
-    vertical-align: auto;
+.table-container {
+    align-items: center;
+    font-family: 'Roboto';
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2%;
+    text-align: center;
+    align-items: center;
+    display: inline;
+    width: 100%;
 }
-    
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    max-height: none !important;
+  }
