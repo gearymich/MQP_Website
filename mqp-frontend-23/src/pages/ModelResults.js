@@ -3,9 +3,9 @@ import React from 'react';
 import ModelTable from '../components/ModelTable';
 import LabelTable from '../components/LabelTable';
 
-import './UserList.css';
+import './ModelResults.css';
 
-const UserList = () => {
+const ModelResults = () => {
   return (
     <main className='table-container'>
       <h2> 2023 MQP Model Data </h2>
@@ -20,4 +20,4 @@ const UserList = () => {
   );
 };
 
-export default UserList;
+export default ModelResults;

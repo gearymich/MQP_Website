@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 
 const StripedDataGrid = styled(DataGrid)(({}) => ({
   [`& .${gridClasses.row}.odd`]: {
-    backgroundColor: '#ecebeb',
+    backgroundColor: '#e6e6e6',
     '&:hover, &.Mui-hovered': {
       backgroundColor: 'lightblue',
       '@media (hover: none)': {

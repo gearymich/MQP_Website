@@ -7,7 +7,7 @@ const tableauOptions = {
     height: 800,
     width: 1000,
     hideTabs: false,
-    hideToolbar: true,
+    hideToolbar: false,
   
     // added interval support - an integer can be passed as milliseconds in the options object and refreshDataAsync() will refresh the data automatically on your preferred interval.
     // All other vizCreate options are supported here, too
@@ -31,15 +31,18 @@ const tableauOptions = {
     <TableauReport
       url="https://public.tableau.com/views/TableauVisualsMQP-TraffickerStateofOrigin/TraffickerDashboard?:language=en-US&:display_count=n&:origin=viz_share_link"
       options={tableauOptions}
+      query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
     />
-    <TableauReport
+    {/* <TableauReport
       url="https://public.tableau.com/views/TableauVisualsMQP-SeizureLocation/SeizureDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
       options={tableauOptions}
+      query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
     />
     <TableauReport
       url="https://public.tableau.com/views/TableauVisualsMQP-PlantAnimalStatistics/QuantityPriceDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
       options={tableauOptions}
-    />
+      query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
+    /> */}
     </div>
     );
   }
