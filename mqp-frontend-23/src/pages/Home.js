@@ -63,7 +63,7 @@ function Home() {
                 This project was created by three Worcester Polytechnic Institute
                 computer science majors for their <a href="https://www.wpi.edu/academics/undergraduate/major-qualifying-project">Major Qualifying Project (MQP)</a>: 
                 <dl>
-                  <dd>Julie Andrande ('23)</dd>
+                  <dd>Julie Andrade ('23)</dd>
                   <dd>Michael Geary ('23)</dd>
                   <dd>Bao Huynh ('23)</dd>
                 </dl>
