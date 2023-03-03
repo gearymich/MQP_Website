@@ -49,7 +49,7 @@ function Home() {
             <DataItem text={"Over 5000 Unique Tokens Extracted"} />
             <DataItem text={"Over 300 Documents Annotated"} />
             <DataItem text={"Data sourced from over 23 News Sources"} />
-            <DataItem text={"XXX Poached Species/Products Identified"} />
+            <DataItem text={"Over 100 Poached Species/Products Identified"} />
             <DataItem text={"Crimes Identified across All 28 States and 8 Union Territories of India"} />
           </Grid>
         </div>
