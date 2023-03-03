@@ -56,14 +56,7 @@ function Home() {
       </div>
       <div className="global-padding about-us-section">
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ sm: 8, md: 12 }} className="grid-format">
-            <Grid item xs={5} sm={6}>
-              <img
-                src="./Elephas_maximus_(Bandipur).jpg"
-                alt= "Indian Elephant"
-                className="elephant-img"
-                />
-            </Grid>
-            <Grid item xs={5} sm={6}>
+          <Grid item xs={5} sm={6}>
               <div className="title">
                 <h1 className="about-hero">About Us</h1>
                 <p>
@@ -85,14 +78,14 @@ function Home() {
               </p>
               </div>
             </Grid>
+            <Grid item xs={5} sm={6}>
+              <img
+                src="./Pangolin.jpg"
+                alt= "Pangolin"
+                className="elephant-img"
+                />
+            </Grid>
           </Grid>
-      </div>
-      <div className="alt-background-color">
-        <p> <b>
-        This material is based upon work supported by the National Science Foundation under grant NSF-2039951. 
-        Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors 
-        and do not necessarily reflect the views of the National Science Foundation.</b>
-        </p>
       </div>
       </main>
   );

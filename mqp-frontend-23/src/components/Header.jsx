@@ -19,7 +19,7 @@ function Header() {
       >
         <Tab label="Home" component={Link} to="/" />
         <Tab label="Model Results"  component={Link} to="/users" />
-        <Tab label="About Us" component={Link} to="/about" />
+        <Tab label="Tableau Visuals" component={Link} to="/tableau" />
       </Tabs>
     </AppBar>
     <Outlet />

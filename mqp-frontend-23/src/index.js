@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter as Router, Route, Routes} from 'react-router-dom';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import ModelResults from './pages/ModelResults';
-import About from './pages/About';
+import About from './pages/Tableau';
 import NotFound from './pages/NotFound';
 
 import './index.css';
@@ -21,9 +22,10 @@ root.render(
         {/* Base Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/users" element={<ModelResults />} />
-        <Route path="/about" element={<About />}/>
+        <Route path="/tableau" element={<About />}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Footer/>
     </Router>
   </React.StrictMode>
 );

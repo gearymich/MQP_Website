@@ -3,6 +3,7 @@ padding-left: 12%;
 padding-right: 12%;
 padding-top: 1vh;
 padding-bottom: 1vh;
+
 }
 
 .grid-format {
@@ -10,17 +11,28 @@ display: grid;
 direction: row;
 justify-content: space-around;
 align-items: center;
+
 }
 
 .home-section .about-us-section{
 padding-top: 50px;
 padding-bottom: 50px;
 display: flex;
-justify-content: space-between;
+
+/* justify-content: space-between; */
+}
+
+.background-image {
+padding: 100px 100px 100px 100px;
+background-image: url("/mqp-frontend-23/public/Flamingos_Laguna_Colorada.jpg");
+background-position: center;
+background-size: 'cover';
+background-repeat: 'no-repeat';
 }
 
 .title {
 text-align: center;
+
 }
     
 .title-hero {
@@ -39,11 +51,13 @@ width: 100%;
 
 .data-section {
 padding-bottom: 100px;
+
 }
 
 .data-hero {
 font-family: 'Roboto';
 text-align: center;
+
 }
 
 .data-text {
@@ -53,17 +67,21 @@ height: 100%;
 min-height: 120px;
 border-radius: 5px;
 padding: 0px 8px 0px 8px;
+
 }
 
 .alt-background-color {
     background-color: #e6e6e6;
+    
 }
 
 .about-hero {
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #c5f4c5;
-    color:black;
-    font-family: 'Roboto';
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    }
+padding: 8px;
+border-radius: 4px;
+background-color: #c5f4c5;
+color:black;
+font-family: 'Roboto';
+box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+}
+
