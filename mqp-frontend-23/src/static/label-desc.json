@@ -1,0 +1,71 @@
+{
+    "count": 11,
+    "entries": [
+        {
+            "id": 1,
+            "label": "newsSource",
+            "desc": "A media site that report trafficking event",
+            "num": 300
+        },
+        {
+            "id": 2,
+            "label": "publishDate",
+            "desc": "Reported time of trafficking event",
+            "num": 136
+        },
+        {
+            "id": 3,
+            "label": "numOfArrests",
+            "desc": "Number of traffickers involved",
+            "num": 479
+        },
+        {
+            "id": 4,
+            "label": "seizureLocation",
+            "desc": "Seizure Location of trafficking incidents",
+            "num": 589
+        },
+        {
+            "id": 5,
+            "label": "productName",
+            "desc": "Part or processed goods from trafficked species",
+            "num": 1323
+        },
+        {
+            "id": 6,
+            "label": "species",
+            "desc": "A species' name (general english only)",
+            "num": 2085
+        },
+        {
+            "id": 7,
+            "label": "traffickerName / Origin / Birthyear",
+            "desc": "ID of traffickers (including geographic and age)",
+            "num": 1098
+        },
+        {
+            "id": 8,
+            "label": "price",
+            "desc": "Price of species/products",
+            "num": 170
+        },
+        {
+            "id": 9,
+            "label": "priceUnit",
+            "desc": "Currency reported",
+            "num": 160
+        },
+        {
+            "id": 10,
+            "label": "quantity",
+            "desc": "Number of species/products",
+            "num": 1003
+        },
+        {
+            "id": 11,
+            "label": "quantityUnit",
+            "desc": "Counting units reported",
+            "num": 269
+        }
+    ]
+}

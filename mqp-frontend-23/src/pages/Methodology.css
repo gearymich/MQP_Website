@@ -1,0 +1,43 @@
+.global-padding {
+padding-left: 12%;
+padding-right: 12%;
+padding-top: 1vh;
+padding-bottom: 1vh;
+}
+
+.grid-format {
+display: grid;
+direction: row;
+justify-content: space-around;
+align-items: center;
+}
+
+.labels-pipes-section .data-pipe-section{
+padding-top: 50px;
+padding-bottom: 50px;
+display: flex;
+margin: 0;
+
+
+justify-content: space-between;
+}
+
+.figures {
+text-align: center;
+align-items: center;
+}
+
+
+.figure-img {
+height: 100%;
+width: 100%;
+}
+
+.alt-background-color-methods {
+margin: 12% 2% 2% 2%;
+padding: 2px 0px 2px 0px;
+background-color: #E4F4F9;
+box-shadow: 0 0 5px rgba(0,0,0,0.5);
+
+}
+

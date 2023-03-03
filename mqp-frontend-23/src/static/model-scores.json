@@ -19,7 +19,7 @@
         },
         {
             "id": 3,
-            "model": "Submodels, Tok2Vec",
+            "model": "Model A (Submodels, Tok2Vec)",
             "f1-score": 87.59,
             "standard-error": 1.612,
             "lb-ci": 84.36,
@@ -27,7 +27,7 @@
         },
         {
             "id": 4,
-            "model": "Single Model, Tok2Vec",
+            "model": "Model B (Single Model, Tok2Vec)",
             "f1-score": 87.60,
             "standard-error": 1.641,
             "lb-ci": 84.32,
@@ -35,7 +35,7 @@
         },
         {
             "id": 5,
-            "model": "Submodels, Transformer",
+            "model": "Model C (Submodels, Transformer)",
             "f1-score": 93.10,
             "standard-error": 1.352,
             "lb-ci": 90.40,
@@ -43,7 +43,7 @@
         },
         {
             "id": 6,
-            "model": "Single Model, Transformer",
+            "model": "Model D (Single Model, Transformer)",
             "f1-score": 93.87,
             "standard-error": 1.085,
             "lb-ci": 91.70,

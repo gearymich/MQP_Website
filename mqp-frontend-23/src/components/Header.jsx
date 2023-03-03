@@ -18,6 +18,7 @@ function Header() {
         variant="fullWidth"
       >
         <Tab label="Home" component={Link} to="/" />
+        <Tab label="Methods"  component={Link} to="/methods" />
         <Tab label="Model Results"  component={Link} to="/users" />
         <Tab label="Tableau Visuals" component={Link} to="/tableau" />
       </Tabs>

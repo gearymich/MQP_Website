@@ -8,7 +8,7 @@ import './ModelResults.css';
 const ModelResults = () => {
   return (
     <main className='table-container'>
-      <h2> 2023 MQP Model Data </h2>
+      <h2> 2023 MQP Baselines + Proposed Models </h2>
       <div>     
         <ModelTable/>
       </div>
