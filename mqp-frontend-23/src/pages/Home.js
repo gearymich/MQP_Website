@@ -1,5 +1,4 @@
 import React from 'react';
-import TableauReport from 'tableau-react';
 
 import { Grid, Typography } from '@mui/material';
 import './Home.css';
