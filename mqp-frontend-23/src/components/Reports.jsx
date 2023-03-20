@@ -7,7 +7,7 @@ const tableauOptions = {
     height: 800,
     width: 1000,
     hideTabs: false,
-    hideToolbar: false,
+    hideToolbar: true,
   
     // added interval support - an integer can be passed as milliseconds in the options object and refreshDataAsync() will refresh the data automatically on your preferred interval.
     // All other vizCreate options are supported here, too
@@ -16,15 +16,16 @@ const tableauOptions = {
 
   function TraffickerMap() {
     return (
-    <div className="reports-stats">
-    <TableauReport
-      url="https://public.tableau.com/views/trafficker/TraffickerDashboard?:language=en-US&:display_count=n&:origin=viz_share_link"
-      options={tableauOptions}
-      query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
-    />
-    </div>
-    );
-  }
+      <div className="reports-stats">
+      <TableauReport
+        url="https://public.tableau.com/views/trafficker/TraffickerDashboard?:language=en-US&:display_count=n&:origin=viz_share_link"
+        options={tableauOptions}
+        query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
+      />
+
+      </div>
+      );
+    }
 
   const SeizureBarchart = () => {
     return (
@@ -34,6 +35,7 @@ const tableauOptions = {
       options={tableauOptions}
       query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
     />
+
     </div>
     );
   }

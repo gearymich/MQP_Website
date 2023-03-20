@@ -12,13 +12,9 @@ justify-content: space-around;
 align-items: center;
 }
 
-.title-hero {
-padding: 8px;
-border-radius: 4px;
-background-color: #bfe1d9;
+.method-hero {
 color:black;
 font-family: 'Roboto';
-box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .labels-pipes-section .data-pipe-section{

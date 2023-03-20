@@ -11,7 +11,7 @@ function Methodology() {
   return (
     <main>
     <div className='global-padding data-pipe-section figures'>
-    <h1 className='title-hero'>Methodology</h1>
+    <h1 className='method-hero'>Methodology</h1>
     <p>This Project builds on the previous 2022 MQP by expanding on the data collection process,
     along with implementing an entirely new NER solutions for extract wildlife information.
     Using the previous pipeline as a foundation, our solution follows the steps below to collect and 
@@ -31,7 +31,7 @@ function Methodology() {
         <Grid container spacing={{ xs: 4, md: 6 }} columns={{ sm: 8, md: 12 }} className="grid-format">
           <Grid item xs={5} sm={6}>
           <div className="title">
-              <h2 className='title-hero'>Annotation Labels</h2>
+              <h2 className='method-hero'>Annotation Labels</h2>
               <p>
                 With over 300 Articles Scraped from online Indian News Sources, our group worked to annotate
                 every article to quantify the following information:
@@ -41,7 +41,7 @@ function Methodology() {
             </Grid>
             <Grid item xs={5} sm={6}>
             <div className='figures alt-background-color-methods'>
-                <h2 className='title-hero'>Types of Pipelines Used</h2>
+                <h2 className='method-hero'>Types of Pipelines Used</h2>
                 <figure>
                 <img
                     src="./spacy-pipeline-original.svg"
