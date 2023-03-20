@@ -14,48 +14,28 @@ const tableauOptions = {
     // They are listed here: https://help.tableau.com/current/api/js_api/en-us/JavaScriptAPI/js_api_ref.htm#vizcreateoptions_record
   };
 
-  function TraffickerReport() {
+  function TraffickerMap() {
     return (
     <div className="reports-stats">
     <TableauReport
-      url="https://public.tableau.com/views/TableauVisualsMQP-TraffickerStateofOrigin/TraffickerDashboard?:language=en-US&:display_count=n&:origin=viz_share_link"
+      url="https://public.tableau.com/views/trafficker/TraffickerDashboard?:language=en-US&:display_count=n&:origin=viz_share_link"
       options={tableauOptions}
+      query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
     />
     </div>
     );
   }
 
-  const SeizureReport = () => {
+  const SeizureBarchart = () => {
     return (
     <div className="reports-stats">
     <TableauReport
-      url="https://public.tableau.com/views/TableauVisualsMQP-TraffickerStateofOrigin/TraffickerDashboard?:language=en-US&:display_count=n&:origin=viz_share_link"
+      url="https://public.tableau.com/views/quantityprice/QuantityPriceDashboard?:language=en-US&:display_count=n&:origin=viz_share_link"
       options={tableauOptions}
       query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
-    />
-    {/* <TableauReport
-      url="https://public.tableau.com/views/TableauVisualsMQP-SeizureLocation/SeizureDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
-      options={tableauOptions}
-      query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
-    />
-    <TableauReport
-      url="https://public.tableau.com/views/TableauVisualsMQP-PlantAnimalStatistics/QuantityPriceDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
-      options={tableauOptions}
-      query="?:embed=yes&:comments=no&:toolbar=yes&:refresh=yes&?:render=false"
-    /> */}
-    </div>
-    );
-  }
-
-  const AnimalPlantStatisticsReport = () => {
-    return (
-    <div className="reports-stats">
-    <TableauReport
-      url="https://public.tableau.com/views/TableauVisualsMQP-PlantAnimalStatistics/QuantityPriceDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link"
-      options={tableauOptions}
     />
     </div>
     );
   }
   
-export {TraffickerReport, SeizureReport, AnimalPlantStatisticsReport};
+export {TraffickerMap, SeizureBarchart};
