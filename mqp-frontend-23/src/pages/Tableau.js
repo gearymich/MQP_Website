@@ -1,19 +1,13 @@
 import React from 'react';
 
-import { SeizureBarchart, TraffickerMap} from '../components/Reports';
+import { SeizureBarchart} from '../components/Reports';
 import './Tableau.css';
 
 
 const About = () => {
   return (
-    <main className='center'>
-      <div className='data'>
+    <main className='center-tableau'>
       <SeizureBarchart />
-      </div>
-      
-      <div className='data'>
-      <TraffickerMap />
-      </div>
     </main>
     );
   }

@@ -1,4 +1,4 @@
-.global-padding {
-padding-left: 12%;
-padding-right: 12%;
+.center-tableau {
+    padding: 0px 25% 0px 25%;
+    border: 2px solid rgba(0, 0, 0, 0.4);
 }

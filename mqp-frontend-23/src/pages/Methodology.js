@@ -17,7 +17,7 @@ function Methodology() {
     convey NER insights in a meaningful way:</p>
     <figure>
     <img
-            src="./MQP-Visual Pipeline-XL.PNG"
+            src="./MQP-Visual-Pipeline-XL.png"
             alt= "Data-Pipeline"
             className="figure-img"
             style={{maxWidth: '850px'}}
