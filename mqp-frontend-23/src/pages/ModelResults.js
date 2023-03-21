@@ -11,7 +11,7 @@ const ModelResults = () => {
   return (
     <main className='table-container'>
         <div className="global-padding home-section">
-        <h2> Reduced Dataset + Full Dataset Model Metrics </h2>
+        <h2> 2022 + 2023 MQP Models - F1 Scores Graphed (Full + Reduced Dataset) </h2>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ sm: 8, md: 12 }} className="grid-format">
           <Grid item xs={5} sm={6}>
           <img
@@ -29,11 +29,11 @@ const ModelResults = () => {
           </Grid>
         </Grid>
       </div>
-      <h2> 2023 MQP Baselines + Proposed Models </h2>
+      <h2> 2022 MQP Baselines + 2023 MQP Proposed Models (Full Data Only) </h2>
       <div>     
         <ModelTable/>
       </div>
-      <h2> 2023 MQP Model Data (By Label) </h2>
+      <h2> Single Model, Transformer Data By Label (Full Data Only) </h2>
       <div>
         <LabelTable/>
       </div>

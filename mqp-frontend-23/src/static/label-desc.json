@@ -5,67 +5,78 @@
             "id": 1,
             "label": "newsSource",
             "desc": "A media site that report trafficking event",
-            "num": 300
+            "num": 300,
+            "reduced-dataset": "No"
         },
         {
             "id": 2,
             "label": "publishDate",
             "desc": "Reported time of trafficking event",
-            "num": 136
+            "num": 136,
+            "reduced-dataset": "Yes"
         },
         {
             "id": 3,
             "label": "numOfArrests",
             "desc": "Number of traffickers involved",
-            "num": 479
+            "num": 479,
+            "reduced-dataset": "No"
         },
         {
             "id": 4,
             "label": "seizureLocation",
             "desc": "Seizure Location of trafficking incidents",
-            "num": 589
+            "num": 589,
+            "reduced-dataset": "Yes"
         },
         {
             "id": 5,
             "label": "productName",
             "desc": "Part or processed goods from trafficked species",
-            "num": 1323
+            "num": 1323,
+            "reduced-dataset": "Yes"
         },
         {
             "id": 6,
             "label": "species",
             "desc": "A species' name (general english only)",
-            "num": 2085
+            "num": 2085,
+            "reduced-dataset": "Yes"
         },
         {
             "id": 7,
             "label": "traffickerName / Origin / Birthyear",
-            "desc": "ID of traffickers (including geographic and age)",
-            "num": 1098
+            "desc": "Trafficker Identifying Information",
+            "num": 1098,
+            "reduced-dataset": "traffickerName, Birthyear (NOT Origin)"
         },
         {
             "id": 8,
             "label": "price",
             "desc": "Price of species/products",
-            "num": 170
+            "num": 170,
+            "reduced-dataset": "No"
         },
         {
             "id": 9,
             "label": "priceUnit",
             "desc": "Currency reported",
-            "num": 160
+            "num": 160,
+            "reduced-dataset": "No"
         },
         {
             "id": 10,
             "label": "quantity",
             "desc": "Number of species/products",
-            "num": 1003
+            "num": 1003,
+            "reduced-dataset": "No"
         },
         {
             "id": 11,
             "label": "quantityUnit",
             "desc": "Counting units reported",
-            "num": 269
+            "num": 269,
+            "reduced-dataset": "No"
         }
     ]
 }

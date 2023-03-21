@@ -44,10 +44,10 @@ function Home() {
         <div className="global-padding data-section">
           <h2 className="data-hero">Data At a Glance</h2>
           <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} className="grid-format">
-            <DataItem text={"15 Labels used for Classification"} />
+            <DataItem text={"14 Labels used for Classification"} />
             <DataItem text={"Over 5000 Unique Tokens Extracted"} />
-            <DataItem text={"Over 300 Documents Annotated"} />
-            <DataItem text={"Data sourced from over 23 News Sources"} />
+            <DataItem text={"300 Documents Annotated"} />
+            <DataItem text={"23 Indian News Sources Scraped for Wildlife Crime Data"} />
             <DataItem text={"Over 100 Poached Species/Products Identified"} />
             <DataItem text={"Crimes Identified across All 28 States and 8 Union Territories of India"} />
           </Grid>

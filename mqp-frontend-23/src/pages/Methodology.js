@@ -32,7 +32,7 @@ function Methodology() {
           <div className="title">
               <h2 className='method-hero'>Annotation Labels</h2>
               <p>
-                With over 300 Articles Scraped from online Indian News Sources, our group worked to annotate
+                With 300 Articles Scraped from online Indian News Sources, our group worked to annotate
                 every article to quantify the following information:
               </p>
               <LabelDesc/>
@@ -47,6 +47,7 @@ function Methodology() {
                     alt= "Spacy-Pipeline-Original"
                     className="figure-img"
                     />
+                    <i style={{fontSize: 12}}>Img. Source: “Language Processing Pipelines,” spaCy. https://spacy.io/usage/processing-pipelines.</i>
                     <figcaption><b>Original Spacy Pipeline</b>. Contains Modules Not Relevant for this project's use-case (tagger, parser, etc). The Proposed 2022 Model added an Entity Ruler to label 'Species' and 'Products'.</figcaption>
                 </figure>
 

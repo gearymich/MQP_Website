@@ -31,6 +31,14 @@ const columns = [
         align:'center'
     },
     {
+        field: 'reduced-dataset',
+        headerName: 'In Reduced Dataset',
+        minWidth: 50,
+        flex: 1,
+        editable: false,
+        align:'center'
+    }, 
+    {
         field: 'num',
         headerName: '# Of Labels',
         minWidth: 50,
@@ -48,7 +56,7 @@ const LabelDesc = () => {
         autoHeight={true}
         rows={labelSummaries}
         columns={columns}
-        density="standard"
+        density="comfortable"
         getRowClassName={(params) =>
             params.indexRelativeToCurrentPage % 2 === 0 ? 'even' : 'odd'
         }
